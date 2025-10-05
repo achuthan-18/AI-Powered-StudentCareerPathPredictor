@@ -75,7 +75,7 @@ app.post("/upload_excel", upload.single("file"), (req, res) => {
       const result = JSON.parse(output);
       if (result.download_path && fs.existsSync(result.download_path)) {
         const filename = path.basename(result.download_path);
-        result.download_path = `http://localhost:${PORT}/uploads/${filename}`;
+        result.download_path = `https://ai-powered-studentcareerpathpredictor.onrender.com/uploads/${filename}`;
       }
 
       res.json(result);
