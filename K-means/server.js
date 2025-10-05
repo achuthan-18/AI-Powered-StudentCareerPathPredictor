@@ -14,8 +14,7 @@ app.use("/uploads", express.static("uploads"));
 
 const upload = multer({ dest: "uploads/" });
 
-const pythonExecutable =
-  "C:\\Users\\achut\\Documents\\AI-Powered Student Profiling and Career Guidance System\\K-means\\k-meanedamini\\Scripts\\python.exe";
+const pythonExecutable ="python3";
 
 app.post("/predict", async (req, res) => {
   try {
