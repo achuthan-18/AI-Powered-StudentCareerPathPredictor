@@ -4,4 +4,10 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react() , tailwindcss()],
+  server: {
+    proxy: {
+      "/api": "https://ai-powered-student-career-path-predictor.onrender.com"
+    }
+  }
+
 })

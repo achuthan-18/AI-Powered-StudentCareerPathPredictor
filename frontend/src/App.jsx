@@ -62,7 +62,7 @@ function App() {
   const handlePredict = async () => {
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:8501/predict", formData);
+      const res = await axios.post("https://ai-powered-student-career-path-predictor.onrender.com/predict", formData);
       setResult(res.data);
     } catch (err) {
       console.error("Single prediction failed:", err);
@@ -85,7 +85,7 @@ function App() {
     formDataFile.append("file", file);
 
     try {
-      const res = await axios.post("http://localhost:8501/upload_excel", formDataFile, {
+      const res = await axios.post("https://ai-powered-student-career-path-predictor.onrender.com/upload_excel", formDataFile, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
