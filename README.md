@@ -51,5 +51,3 @@ React frontend interacts with Node.js backend, which triggers Python ML scripts 
 
 ---
 
-## ⚙️ System Architecture
-
